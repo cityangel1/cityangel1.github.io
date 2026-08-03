@@ -13,23 +13,20 @@ minimal_mistakes_skin: "dark"   # dark skin, matches the terminal aesthetic
 
 # ---------- Author / sidebar ----------
 author:
-  name: "cityangel1"
+  name: "Brian Karaba Wachira"
   avatar: "/assets/images/avatar.jpg"   # EDIT: replace with your real headshot
-  bio: "Offensive security engineer. I break into systems on purpose, so the people who own them can fix it first."
-  location: "Remote / Open to relocate"   # EDIT
+  bio: "Offensive security expert. You think you have the keys to your kingdom,well I have the master key."
+  location: "Kenya"   # EDIT
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:you@example.com"       # EDIT
+      url: "mailto:cityangel111@gmail.com" 
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cityangel1"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/yourhandle"   # EDIT
-    - label: "X / Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/yourhandle"       # EDIT
+      url: "https://linkedin.com/in/yourhandle" 
 
 footer:
   links:
