@@ -1,0 +1,84 @@
+# ---------- Site ----------
+title: "cityangel1 // Offensive Security"
+subtitle: "Pentesting · Red Teaming · Write-ups"
+description: "Offensive security portfolio and write-up log."
+url: "https://cityangel1.github.io"
+baseurl: ""
+locale: "en-US"
+repository: "cityangel1/cityangel1.github.io"
+
+# ---------- Theme ----------
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dark"   # dark skin, matches the terminal aesthetic
+
+# ---------- Author / sidebar ----------
+author:
+  name: "cityangel1"
+  avatar: "/assets/images/avatar.jpg"   # EDIT: replace with your real headshot
+  bio: "Offensive security engineer. I break into systems on purpose, so the people who own them can fix it first."
+  location: "Remote / Open to relocate"   # EDIT
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:you@example.com"       # EDIT
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cityangel1"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/yourhandle"   # EDIT
+    - label: "X / Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/yourhandle"       # EDIT
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cityangel1"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/yourhandle"   # EDIT
+
+# ---------- Build settings ----------
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
+include:
+  - _pages
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# ---------- Plugins (all on GitHub Pages' whitelist) ----------
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# ---------- Defaults ----------
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: false
+      related: true
+      toc: true
+      toc_sticky: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

@@ -1,0 +1,7 @@
+main:
+  - title: "Write-ups"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "CV"
+    url: /cv/
