@@ -35,8 +35,25 @@ html[data-theme="light"] {
   --code-bg: #F0F1F4;
 }
 
+/* Fallback if the toggle script hasn't run yet (e.g. first paint, or JS blocked) */
+@media (prefers-color-scheme: light) {
+  html:not([data-theme]) {
+    --bg: #F6F7F9;
+    --bg-elevated: #FFFFFF;
+    --bg-sidebar: #FFFFFF;
+    --border: #E2E5EA;
+    --text: #1B1F27;
+    --text-muted: #5B6472;
+    --link: #0E8C79;
+    --accent: #C81E37;
+    --code-bg: #F0F1F4;
+  }
+}
+
 html,
-body {
+body,
+.initial-content,
+.layout--single {
   background-color: var(--bg) !important;
   color: var(--text) !important;
   transition: background-color .2s ease, color .2s ease;

@@ -1,4 +1,5 @@
 <script>
+  // Set the theme attribute immediately (before paint) so there's no flash.
   (function () {
     try {
       var saved = localStorage.getItem('site-theme');
@@ -7,4 +8,30 @@
       document.documentElement.setAttribute('data-theme', 'dark');
     }
   })();
+
+  // Build the floating toggle button once the DOM exists.
+  document.addEventListener('DOMContentLoaded', function () {
+    function current() {
+      return document.documentElement.getAttribute('data-theme') || 'dark';
+    }
+
+    var btn = document.createElement('button');
+    btn.id = 'theme-toggle';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Toggle light and dark theme');
+
+    function paintIcon() {
+      btn.textContent = current() === 'dark' ? '☀️' : '🌙';
+    }
+    paintIcon();
+
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('site-theme', next); } catch (e) {}
+      paintIcon();
+    });
+
+    document.body.appendChild(btn);
+  });
 </script>
