@@ -14,7 +14,7 @@ minimal_mistakes_skin: "dark"   # dark skin, matches the terminal aesthetic
 # ---------- Author / sidebar ----------
 author:
   name: "Brian Karaba Wachira"
-  avatar: "/assets/images/avatar.jpg"   # EDIT: replace with your real headshot
+  avatar: "/assets/images/1st.webp"   # EDIT: replace with your real headshot
   bio: "Offensive security expert. You think you have the keys to your kingdom,well I have the master key."
   location: "Kenya"   # EDIT
   links:
