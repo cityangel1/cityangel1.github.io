@@ -1,7 +1,9 @@
 main:
-  - title: "Write-ups"
-    url: /
   - title: "About"
     url: /about/
+  - title: "Skills&Work"
+    url: /skills-work/
   - title: "CV"
     url: /cv/
+  - title: "Besides Cybersecurity"
+    url: /besides-cybersecurity/

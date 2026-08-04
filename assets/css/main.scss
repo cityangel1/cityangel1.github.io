@@ -1,0 +1,145 @@
+---
+---
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'dark' }}";
+@import "minimal-mistakes";
+
+/* =====================================================================
+   Custom palette + light/dark theme system
+   Toggled at runtime via html[data-theme="dark"|"light"], set by
+   _includes/head/custom.html (initial) and _includes/foot/custom.html
+   (the toggle button). Falls back to dark if JS never runs.
+   ===================================================================== */
+
+:root,
+html[data-theme="dark"] {
+  --bg: #0B0E14;
+  --bg-elevated: #12161f;
+  --bg-sidebar: #10131a;
+  --border: #232a38;
+  --text: #DDE3EA;
+  --text-muted: #8b95a5;
+  --link: #21D4B4;
+  --accent: #FF3B4E;
+  --code-bg: #171c26;
+}
+
+html[data-theme="light"] {
+  --bg: #F6F7F9;
+  --bg-elevated: #FFFFFF;
+  --bg-sidebar: #FFFFFF;
+  --border: #E2E5EA;
+  --text: #1B1F27;
+  --text-muted: #5B6472;
+  --link: #0E8C79;
+  --accent: #C81E37;
+  --code-bg: #F0F1F4;
+}
+
+html,
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+
+/* ---------- masthead / nav ---------- */
+.masthead {
+  background-color: var(--bg-sidebar) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+.masthead__inner-wrap,
+.site-title,
+.greedy-nav,
+.greedy-nav a { color: var(--text) !important; }
+.greedy-nav a:hover { color: var(--accent) !important; }
+.greedy-nav .visible-links a:before { background: var(--accent) !important; }
+
+/* ---------- sidebar / author profile ---------- */
+.sidebar {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5em 1.25em;
+}
+.author__avatar img { border: 2px solid var(--border); }
+.author__name, .author__bio { color: var(--text) !important; }
+.author__urls a,
+.author__urls .fas,
+.author__urls .fab { color: var(--text-muted) !important; }
+.author__urls a:hover { color: var(--accent) !important; }
+
+/* ---------- main content ---------- */
+.page,
+.page__content,
+.archive { color: var(--text); }
+
+.page__title,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.archive__item-title a { color: var(--text) !important; }
+
+.archive__item-title a:hover { color: var(--accent) !important; }
+.page__meta, .page__related { color: var(--text-muted) !important; }
+
+.page__content blockquote {
+  background-color: var(--bg-elevated);
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  padding: 0.8em 1.2em;
+  border-radius: 0 6px 6px 0;
+}
+
+.highlight, code, pre, .page__content code {
+  background-color: var(--code-bg) !important;
+  color: var(--text) !important;
+}
+
+/* ---------- buttons ---------- */
+.btn--primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+}
+.btn--primary:hover { opacity: .85; }
+
+/* ---------- footer ---------- */
+.page__footer,
+.page__footer-follow,
+.page__footer-copyright {
+  background-color: var(--bg-sidebar) !important;
+  color: var(--text-muted) !important;
+}
+.page__footer a { color: var(--text-muted); }
+.page__footer a:hover { color: var(--accent); }
+
+/* ---------- table of contents ---------- */
+.toc { background-color: var(--bg-elevated) !important; border: 1px solid var(--border) !important; }
+.toc__title { color: var(--text) !important; }
+.toc .nav__title { background-color: var(--bg-elevated) !important; }
+
+/* ---------- theme toggle button ---------- */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background-color: var(--bg-elevated);
+  color: var(--text);
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: border-color .15s ease, transform .15s ease;
+}
+#theme-toggle:hover { border-color: var(--accent); transform: translateY(-2px); }

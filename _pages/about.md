@@ -10,14 +10,6 @@ author_profile: true
 I'm an offensive security practitioner focused on finding the gap between how a system is *supposed* to work and how it actually behaves under pressure — network intrusion, web application exploitation, and post-exploitation tradecraft.
 
 I'm comfortable working the full arc of an engagement: recon, exploitation, privilege escalation, and writing findings a non-technical stakeholder can actually act on.
-## Interests
-
-- API Testing
-- Cloud Security
-- Web Application Testing
-- Malware Analysis
-- Reverse Engineering
-- Incident Response
 
 ## My Hacker Manifesto
 
