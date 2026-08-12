@@ -84,9 +84,28 @@ a:hover { color: var(--accent-hover); }
 .masthead {
   background-color: var(--bg-sidebar) !important;
   border-bottom: 1px solid var(--border) !important;
+  width: 100% !important;
+  margin: 0 !important;
 }
-.masthead__inner-wrap,
-.site-title,
+.masthead__inner-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+.site-title {
+  color: var(--text) !important;
+  font-size: 1.4rem !important;
+  line-height: 1.2;
+  display: inline-block;
+}
+.site-subtitle {
+  display: block;
+  color: var(--text-muted) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-top: 0.15rem;
+}
 .greedy-nav,
 .greedy-nav a { color: var(--text) !important; }
 .greedy-nav a {
@@ -96,6 +115,9 @@ a:hover { color: var(--accent-hover); }
 }
 .greedy-nav a:hover { color: var(--accent) !important; }
 .greedy-nav .visible-links a:before { background: var(--accent) !important; }
+.greedy-nav button {
+  color: var(--text) !important;
+}
 
 /* ---------- sidebar / author profile ---------- */
 .sidebar {
