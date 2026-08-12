@@ -4,53 +4,53 @@
 @import "minimal-mistakes";
 
 /* =====================================================================
-   Custom palette + light/dark theme system — NYEKUSA-inspired
-   Forest green #1F6A3A + gold #C8A13A, Playfair Display / Inter.
+   Professional portfolio theme — custom palette:
+   #FBF1F0 (bg) · #E35314 (accent) · #966336 (muted/border)
+   #164147 (deep teal, text/dark-mode bg) · #FA3D3B (hover/alert accent)
    Toggled at runtime via html[data-theme="dark"|"light"], set by
    _includes/head/custom.html (initial + toggle button).
-   Defaults to the light/cream look to match nyekusa's orientation.
    ===================================================================== */
 
 :root,
 html[data-theme="light"] {
-  --bg: #faf9f5;
-  --bg-elevated: #ffffff;
-  --bg-sidebar: #ffffff;
-  --border: #e5e7eb;
-  --text: #2c2c2c;
-  --text-muted: #6b7280;
-  --link: #1F6A3A;
-  --accent: #C8A13A;
-  --accent-hover: #b08a2a;
-  --code-bg: #f5edcc;
+  --bg: #FBF1F0;
+  --bg-elevated: #FFFFFF;
+  --bg-sidebar: #FFFFFF;
+  --border: #E9D9CF;
+  --text: #164147;
+  --text-muted: #966336;
+  --link: #E35314;
+  --accent: #E35314;
+  --accent-hover: #FA3D3B;
+  --code-bg: #F3E5DF;
 }
 
 html[data-theme="dark"] {
-  --bg: #12201a;
-  --bg-elevated: #16261f;
-  --bg-sidebar: #16261f;
-  --border: #274233;
-  --text: #eef3ee;
-  --text-muted: #9db3a4;
-  --link: #4fbf82;
-  --accent: #d8b957;
-  --accent-hover: #C8A13A;
-  --code-bg: #1b2e25;
+  --bg: #12363B;
+  --bg-elevated: #164147;
+  --bg-sidebar: #0E2E33;
+  --border: #24565D;
+  --text: #FBF1F0;
+  --text-muted: #C9A88F;
+  --link: #F4894E;
+  --accent: #F4894E;
+  --accent-hover: #FA3D3B;
+  --code-bg: #0E2E33;
 }
 
 /* Fallback if the toggle script hasn't run yet (e.g. first paint, or JS blocked) */
 @media (prefers-color-scheme: dark) {
   html:not([data-theme]) {
-    --bg: #12201a;
-    --bg-elevated: #16261f;
-    --bg-sidebar: #16261f;
-    --border: #274233;
-    --text: #eef3ee;
-    --text-muted: #9db3a4;
-    --link: #4fbf82;
-    --accent: #d8b957;
-    --accent-hover: #C8A13A;
-    --code-bg: #1b2e25;
+    --bg: #12363B;
+    --bg-elevated: #164147;
+    --bg-sidebar: #0E2E33;
+    --border: #24565D;
+    --text: #FBF1F0;
+    --text-muted: #C9A88F;
+    --link: #F4894E;
+    --accent: #F4894E;
+    --accent-hover: #FA3D3B;
+    --code-bg: #0E2E33;
   }
 }
 
@@ -60,14 +60,21 @@ body,
 .layout--single {
   background-color: var(--bg) !important;
   color: var(--text) !important;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   transition: background-color .2s ease, color .2s ease;
 }
 
-h1, h2, h3, h4, h5, h6,
-.page__title,
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+  color: var(--text) !important;
+}
+
 .site-title {
-  font-family: 'Playfair Display', Georgia, serif !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
 }
 
 a { color: var(--link); }
@@ -82,44 +89,52 @@ a:hover { color: var(--accent-hover); }
 .site-title,
 .greedy-nav,
 .greedy-nav a { color: var(--text) !important; }
-.greedy-nav a:hover { color: var(--accent-hover) !important; }
+.greedy-nav a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.greedy-nav a:hover { color: var(--accent) !important; }
 .greedy-nav .visible-links a:before { background: var(--accent) !important; }
 
 /* ---------- sidebar / author profile ---------- */
 .sidebar {
   background-color: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 1.5em 1.25em;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
 }
-.author__avatar img { border: 2px solid var(--accent); }
+.author__avatar img {
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+}
 .author__name, .author__bio { color: var(--text) !important; }
+.author__name { font-weight: 700; letter-spacing: -0.01em; }
 .author__urls a,
 .author__urls .fas,
 .author__urls .fab { color: var(--text-muted) !important; }
-.author__urls a:hover { color: var(--accent-hover) !important; }
+.author__urls a:hover { color: var(--accent) !important; }
 
 /* ---------- main content ---------- */
 .page,
 .page__content,
 .archive { color: var(--text); }
 
-.page__title,
+.page__title { color: var(--text) !important; }
 .page__content h1,
 .page__content h2,
-.page__content h3,
-.archive__item-title a { color: var(--link) !important; }
+.page__content h3 { color: var(--text) !important; }
 
-.archive__item-title a:hover { color: var(--accent-hover) !important; }
+.archive__item-title a { color: var(--text) !important; font-weight: 700; }
+.archive__item-title a:hover { color: var(--accent) !important; }
 .page__meta, .page__related { color: var(--text-muted) !important; }
 
 .page__content blockquote {
-  background-color: var(--code-bg);
+  background-color: var(--bg-elevated);
   border-left: 3px solid var(--accent);
   color: var(--text-muted);
   padding: 0.8em 1.2em;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 6px 6px 0;
 }
 
 .highlight, code, pre, .page__content code {
@@ -127,21 +142,19 @@ a:hover { color: var(--accent-hover); }
   color: var(--text) !important;
 }
 
-/* ---------- buttons (pill-shaped, gold, like nyekusa) ---------- */
+/* ---------- buttons ---------- */
 .btn--primary {
   background-color: var(--accent) !important;
   border-color: var(--accent) !important;
-  color: #fff !important;
-  border-radius: 50px !important;
-  font-weight: 700;
-  box-shadow: 0 4px 20px rgba(200,161,58,0.35);
-  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #FBF1F0 !important;
+  border-radius: 4px !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all .2s ease;
 }
 .btn--primary:hover {
   background-color: var(--accent-hover) !important;
   border-color: var(--accent-hover) !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(200,161,58,0.45);
 }
 
 /* ---------- footer ---------- */
@@ -152,11 +165,11 @@ a:hover { color: var(--accent-hover); }
   color: var(--text-muted) !important;
 }
 .page__footer a { color: var(--text-muted); }
-.page__footer a:hover { color: var(--accent-hover); }
+.page__footer a:hover { color: var(--accent); }
 
 /* ---------- table of contents ---------- */
-.toc { background-color: var(--bg-elevated) !important; border: 1px solid var(--border) !important; border-radius: 12px !important; }
-.toc__title { color: var(--link) !important; }
+.toc { background-color: var(--bg-elevated) !important; border: 1px solid var(--border) !important; border-radius: 6px !important; }
+.toc__title { color: var(--text) !important; }
 .toc .nav__title { background-color: var(--bg-elevated) !important; }
 
 /* ---------- theme toggle button ---------- */
@@ -165,19 +178,19 @@ a:hover { color: var(--accent-hover); }
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid var(--border);
   background-color: var(--accent);
-  color: #fff;
-  font-size: 19px;
+  color: #FBF1F0;
+  font-size: 18px;
   line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
   transition: border-color .15s ease, transform .15s ease;
 }
 #theme-toggle:hover { border-color: var(--accent-hover); transform: translateY(-2px); }

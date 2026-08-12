@@ -9,7 +9,7 @@ repository: "cityangel1/cityangel1.github.io"
 
 # ---------- Theme ----------
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"   # light skin, matches the NYEKUSA-style palette
+minimal_mistakes_skin: "dark"   # dark skin, matches the professional portfolio palette
 
 # ---------- Author / sidebar ----------
 author:
