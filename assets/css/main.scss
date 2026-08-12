@@ -26,31 +26,31 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-  --bg: #12363B;
-  --bg-elevated: #164147;
-  --bg-sidebar: #0E2E33;
-  --border: #24565D;
+  --bg: #1C1C1C;
+  --bg-elevated: #242424;
+  --bg-sidebar: #1C1C1C;
+  --border: #333333;
   --text: #FBF1F0;
-  --text-muted: #C9A88F;
+  --text-muted: #B89A85;
   --link: #F4894E;
   --accent: #F4894E;
   --accent-hover: #FA3D3B;
-  --code-bg: #0E2E33;
+  --code-bg: #242424;
 }
 
 /* Fallback if the toggle script hasn't run yet (e.g. first paint, or JS blocked) */
 @media (prefers-color-scheme: dark) {
   html:not([data-theme]) {
-    --bg: #12363B;
-    --bg-elevated: #164147;
-    --bg-sidebar: #0E2E33;
-    --border: #24565D;
+    --bg: #1C1C1C;
+    --bg-elevated: #242424;
+    --bg-sidebar: #1C1C1C;
+    --border: #333333;
     --text: #FBF1F0;
-    --text-muted: #C9A88F;
+    --text-muted: #B89A85;
     --link: #F4894E;
     --accent: #F4894E;
     --accent-hover: #FA3D3B;
-    --code-bg: #0E2E33;
+    --code-bg: #242424;
   }
 }
 
