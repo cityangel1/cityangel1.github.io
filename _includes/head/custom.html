@@ -1,18 +1,22 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <script>
   // Set the theme attribute immediately (before paint) so there's no flash.
   (function () {
     try {
       var saved = localStorage.getItem('site-theme');
-      document.documentElement.setAttribute('data-theme', saved || 'dark');
+      document.documentElement.setAttribute('data-theme', saved || 'light');
     } catch (e) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   })();
 
   // Build the floating toggle button once the DOM exists.
   document.addEventListener('DOMContentLoaded', function () {
     function current() {
-      return document.documentElement.getAttribute('data-theme') || 'dark';
+      return document.documentElement.getAttribute('data-theme') || 'light';
     }
 
     var btn = document.createElement('button');

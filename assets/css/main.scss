@@ -4,49 +4,53 @@
 @import "minimal-mistakes";
 
 /* =====================================================================
-   Custom palette + light/dark theme system
+   Custom palette + light/dark theme system — NYEKUSA-inspired
+   Forest green #1F6A3A + gold #C8A13A, Playfair Display / Inter.
    Toggled at runtime via html[data-theme="dark"|"light"], set by
-   _includes/head/custom.html (initial) and _includes/foot/custom.html
-   (the toggle button). Falls back to dark if JS never runs.
+   _includes/head/custom.html (initial + toggle button).
+   Defaults to the light/cream look to match nyekusa's orientation.
    ===================================================================== */
 
 :root,
-html[data-theme="dark"] {
-  --bg: #0B0E14;
-  --bg-elevated: #12161f;
-  --bg-sidebar: #10131a;
-  --border: #232a38;
-  --text: #DDE3EA;
-  --text-muted: #8b95a5;
-  --link: #21D4B4;
-  --accent: #FF3B4E;
-  --code-bg: #171c26;
+html[data-theme="light"] {
+  --bg: #faf9f5;
+  --bg-elevated: #ffffff;
+  --bg-sidebar: #ffffff;
+  --border: #e5e7eb;
+  --text: #2c2c2c;
+  --text-muted: #6b7280;
+  --link: #1F6A3A;
+  --accent: #C8A13A;
+  --accent-hover: #b08a2a;
+  --code-bg: #f5edcc;
 }
 
-html[data-theme="light"] {
-  --bg: #F6F7F9;
-  --bg-elevated: #FFFFFF;
-  --bg-sidebar: #FFFFFF;
-  --border: #E2E5EA;
-  --text: #1B1F27;
-  --text-muted: #5B6472;
-  --link: #0E8C79;
-  --accent: #C81E37;
-  --code-bg: #F0F1F4;
+html[data-theme="dark"] {
+  --bg: #12201a;
+  --bg-elevated: #16261f;
+  --bg-sidebar: #16261f;
+  --border: #274233;
+  --text: #eef3ee;
+  --text-muted: #9db3a4;
+  --link: #4fbf82;
+  --accent: #d8b957;
+  --accent-hover: #C8A13A;
+  --code-bg: #1b2e25;
 }
 
 /* Fallback if the toggle script hasn't run yet (e.g. first paint, or JS blocked) */
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   html:not([data-theme]) {
-    --bg: #F6F7F9;
-    --bg-elevated: #FFFFFF;
-    --bg-sidebar: #FFFFFF;
-    --border: #E2E5EA;
-    --text: #1B1F27;
-    --text-muted: #5B6472;
-    --link: #0E8C79;
-    --accent: #C81E37;
-    --code-bg: #F0F1F4;
+    --bg: #12201a;
+    --bg-elevated: #16261f;
+    --bg-sidebar: #16261f;
+    --border: #274233;
+    --text: #eef3ee;
+    --text-muted: #9db3a4;
+    --link: #4fbf82;
+    --accent: #d8b957;
+    --accent-hover: #C8A13A;
+    --code-bg: #1b2e25;
   }
 }
 
@@ -56,11 +60,18 @@ body,
 .layout--single {
   background-color: var(--bg) !important;
   color: var(--text) !important;
+  font-family: 'Inter', Arial, sans-serif;
   transition: background-color .2s ease, color .2s ease;
 }
 
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.site-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
 a { color: var(--link); }
-a:hover { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
 
 /* ---------- masthead / nav ---------- */
 .masthead {
@@ -71,22 +82,23 @@ a:hover { color: var(--accent); }
 .site-title,
 .greedy-nav,
 .greedy-nav a { color: var(--text) !important; }
-.greedy-nav a:hover { color: var(--accent) !important; }
+.greedy-nav a:hover { color: var(--accent-hover) !important; }
 .greedy-nav .visible-links a:before { background: var(--accent) !important; }
 
 /* ---------- sidebar / author profile ---------- */
 .sidebar {
   background-color: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.5em 1.25em;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
 }
-.author__avatar img { border: 2px solid var(--border); }
+.author__avatar img { border: 2px solid var(--accent); }
 .author__name, .author__bio { color: var(--text) !important; }
 .author__urls a,
 .author__urls .fas,
 .author__urls .fab { color: var(--text-muted) !important; }
-.author__urls a:hover { color: var(--accent) !important; }
+.author__urls a:hover { color: var(--accent-hover) !important; }
 
 /* ---------- main content ---------- */
 .page,
@@ -97,17 +109,17 @@ a:hover { color: var(--accent); }
 .page__content h1,
 .page__content h2,
 .page__content h3,
-.archive__item-title a { color: var(--text) !important; }
+.archive__item-title a { color: var(--link) !important; }
 
-.archive__item-title a:hover { color: var(--accent) !important; }
+.archive__item-title a:hover { color: var(--accent-hover) !important; }
 .page__meta, .page__related { color: var(--text-muted) !important; }
 
 .page__content blockquote {
-  background-color: var(--bg-elevated);
+  background-color: var(--code-bg);
   border-left: 3px solid var(--accent);
   color: var(--text-muted);
   padding: 0.8em 1.2em;
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 8px 8px 0;
 }
 
 .highlight, code, pre, .page__content code {
@@ -115,13 +127,22 @@ a:hover { color: var(--accent); }
   color: var(--text) !important;
 }
 
-/* ---------- buttons ---------- */
+/* ---------- buttons (pill-shaped, gold, like nyekusa) ---------- */
 .btn--primary {
   background-color: var(--accent) !important;
   border-color: var(--accent) !important;
   color: #fff !important;
+  border-radius: 50px !important;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(200,161,58,0.35);
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn--primary:hover { opacity: .85; }
+.btn--primary:hover {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(200,161,58,0.45);
+}
 
 /* ---------- footer ---------- */
 .page__footer,
@@ -131,11 +152,11 @@ a:hover { color: var(--accent); }
   color: var(--text-muted) !important;
 }
 .page__footer a { color: var(--text-muted); }
-.page__footer a:hover { color: var(--accent); }
+.page__footer a:hover { color: var(--accent-hover); }
 
 /* ---------- table of contents ---------- */
-.toc { background-color: var(--bg-elevated) !important; border: 1px solid var(--border) !important; }
-.toc__title { color: var(--text) !important; }
+.toc { background-color: var(--bg-elevated) !important; border: 1px solid var(--border) !important; border-radius: 12px !important; }
+.toc__title { color: var(--link) !important; }
 .toc .nav__title { background-color: var(--bg-elevated) !important; }
 
 /* ---------- theme toggle button ---------- */
@@ -148,8 +169,8 @@ a:hover { color: var(--accent); }
   height: 46px;
   border-radius: 50%;
   border: 1px solid var(--border);
-  background-color: var(--bg-elevated);
-  color: var(--text);
+  background-color: var(--accent);
+  color: #fff;
   font-size: 19px;
   line-height: 1;
   cursor: pointer;
@@ -159,4 +180,4 @@ a:hover { color: var(--accent); }
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   transition: border-color .15s ease, transform .15s ease;
 }
-#theme-toggle:hover { border-color: var(--accent); transform: translateY(-2px); }
+#theme-toggle:hover { border-color: var(--accent-hover); transform: translateY(-2px); }
