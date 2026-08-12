@@ -82,7 +82,7 @@ a:hover { color: var(--accent-hover); }
 
 /* ---------- masthead / nav ---------- */
 .masthead {
-  background-color: var(--bg-sidebar) !important;
+  background-color: var(--bg) !important;
   border-bottom: 1px solid var(--border) !important;
   width: 100% !important;
   margin: 0 !important;
@@ -92,10 +92,21 @@ a:hover { color: var(--accent-hover); }
   margin: 0 auto;
   padding: 1rem 2rem;
 }
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+}
+.site-logo img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+/* logo image already contains the wordmark — hide the duplicate text
+   title but keep the tagline, which sits inside the same link */
 .site-title {
-  color: var(--text) !important;
-  font-size: 1.4rem !important;
-  line-height: 1.2;
+  font-size: 0 !important;
+  color: transparent !important;
+  line-height: 0;
   display: inline-block;
 }
 .site-subtitle {
@@ -104,7 +115,8 @@ a:hover { color: var(--accent-hover); }
   font-size: 0.8rem !important;
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin-top: 0.15rem;
+  line-height: 1.4;
+  margin-top: 0.3rem;
 }
 .greedy-nav,
 .greedy-nav a { color: var(--text) !important; }

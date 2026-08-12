@@ -7,17 +7,26 @@
   (function () {
     try {
       var saved = localStorage.getItem('site-theme');
-      document.documentElement.setAttribute('data-theme', saved || 'dark');
+      document.documentElement.setAttribute('data-theme', saved || 'light');
     } catch (e) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   })();
 
   // Build the floating toggle button once the DOM exists.
   document.addEventListener('DOMContentLoaded', function () {
     function current() {
-      return document.documentElement.getAttribute('data-theme') || 'dark';
+      return document.documentElement.getAttribute('data-theme') || 'light';
     }
+
+    var logoImg = document.querySelector('.site-logo img');
+    function paintLogo() {
+      if (!logoImg) return;
+      logoImg.src = current() === 'dark'
+        ? '{{ "/assets/images/logo-dark.png" | relative_url }}'
+        : '{{ "/assets/images/logo-light.png" | relative_url }}';
+    }
+    paintLogo();
 
     var btn = document.createElement('button');
     btn.id = 'theme-toggle';
@@ -34,6 +43,7 @@
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem('site-theme', next); } catch (e) {}
       paintIcon();
+      paintLogo();
     });
 
     document.body.appendChild(btn);

@@ -2,6 +2,8 @@
 title: "Offensive Security"
 subtitle: "Pentesting · Red Teaming · Incident Response"
 description: "Offensive security portfolio and write-up log."
+logo: "/assets/images/logo-light.png"
+masthead_title: "Offensive Security"
 url: "https://cityangel1.github.io"
 baseurl: ""
 locale: "en-US"
