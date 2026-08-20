@@ -1,9 +1,0 @@
-main:
-  - title: "About"
-    url: /
-  - title: "Skills&Work"
-    url: /skills-work/
-  - title: "CV"
-    url: /cv/
-  - title: "Besides Cybersecurity"
-    url: /besides-cybersecurity/
