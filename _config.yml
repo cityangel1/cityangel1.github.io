@@ -28,7 +28,7 @@ author:
       url: "https://github.com/cityangel1"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/yourhandle" 
+      url: "https://linkedin.com/in/brian-karaba-wachira" 
 
 footer:
   links:
@@ -37,7 +37,7 @@ footer:
       url: "https://github.com/cityangel1"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/yourhandle"   # EDIT
+      url: "https://linkedin.com/in/brian-karaba-wachira"   # EDIT
 
 # ---------- Build settings ----------
 markdown: kramdown
