@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brian Karaba Wachira — Offensive Security</title>
+<meta name="description" content="Offensive security portfolio of Brian Karaba Wachira — penetration testing, red teaming, and incident response write-ups.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark"><span class="dot"></span>brian@offsec:~$</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#writeups">Write-ups</a></li>
+      <li><a href="#beyond">Beyond</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="tt-track">
+          <span class="tt-icon tt-sun">☀</span>
+          <span class="tt-icon tt-moon">☾</span>
+          <span class="tt-knob"></span>
+        </span>
+      </button>
+      <button id="nav-toggle-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="status-chip"><span class="pulse"></span>OPEN TO OFFENSIVE SECURITY WORK</div>
+        <h1 class="hero-title">Finding the gap between how a system <span class="accent-word">should</span> behave — and how it <span class="accent-word">actually</span> does.</h1>
+        <p class="hero-lede">I'm Brian Karaba Wachira, an offensive security practitioner working the full arc of an engagement: recon, exploitation, privilege escalation, and reporting findings a non-technical stakeholder can act on.</p>
+        <div class="hero-ctas">
+          <a href="assets/files/resume.pdf" class="btn btn--primary" target="_blank" rel="noopener">Download CV</a>
+          <a href="#writeups" class="btn btn--ghost">Read write-ups</a>
+          <a href="mailto:cityangel111@gmail.com" class="btn btn--ghost">Say hello</a>
+        </div>
+      </div>
+      <div class="terminal" aria-hidden="false">
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+          <span class="terminal-title">brian@offsec — zsh</span>
+        </div>
+        <div class="terminal-body" id="terminal-body"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid reveal">
+        <img src="assets/images/headshot.webp" alt="Portrait of Brian Karaba Wachira" class="about-photo">
+        <div>
+          <div class="eyebrow">About</div>
+          <h2>Offensive security, from recon to the fix.</h2>
+          <p>I'm an offensive security practitioner focused on finding the gap between how a system is supposed to work and how it actually behaves under pressure — network intrusion, web application exploitation, and post-exploitation tradecraft.</p>
+          <p>I'm comfortable working the full arc of an engagement: recon, exploitation, privilege escalation, and writing findings a non-technical stakeholder can actually act on. Based in Kenya, currently reading Computer Science at Dedan Kimathi University of Technology.</p>
+
+          <details class="manifesto">
+            <summary>Read the manifesto that shaped how I think about this work</summary>
+            <blockquote>Another one got caught today, it's all over the papers. "Teenager arrested in computer crime scandal"...
+
+I made a discovery today. I found a computer. Wait a second, this is cool. It does what I want it to do. If it makes a mistake, it's because I screwed up. Not because it doesn't like me...
+
+This is our world now... the world of the electron and the switch, the beauty of the baud. We explore... and you call us criminals. We exist without skin color, without nationality, without religious bias... and you call us criminals.
+
+Yes, I am a criminal. My crime is that of curiosity. My crime is that of judging people by what they say and think, not what they look like.
+
+I am a hacker, and this is my manifesto. You may stop this individual, but you can't stop us all... after all, we're all alike.</blockquote>
+            <cite>— The Mentor, "The Conscience of a Hacker," 1986</cite>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Toolkit</div>
+        <h2>What I work with</h2>
+        <p>Tools and practices I reach for across recon, exploitation, and reporting.</p>
+      </div>
+      <div class="grid grid--4 reveal">
+        <div class="card skill-card">
+          <h3>Recon &amp; Scanning</h3>
+          <div class="tags">
+            <span class="tag">Nmap</span><span class="tag">Amass</span><span class="tag">Shodan</span><span class="tag">Nuclei</span><span class="tag">Gobuster</span>
+          </div>
+        </div>
+        <div class="card skill-card">
+          <h3>Web Exploitation</h3>
+          <div class="tags">
+            <span class="tag">Burp Suite</span><span class="tag">SQLmap</span><span class="tag">OWASP ZAP</span><span class="tag">ffuf</span>
+          </div>
+        </div>
+        <div class="card skill-card">
+          <h3>Exploitation &amp; C2</h3>
+          <div class="tags">
+            <span class="tag">Metasploit</span><span class="tag">Cobalt Strike</span><span class="tag">Sliver</span><span class="tag">Impacket</span>
+          </div>
+        </div>
+        <div class="card skill-card">
+          <h3>Scripting</h3>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Bash</span><span class="tag">PowerShell</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:2.2rem;">
+        <h3 style="font-size:1rem;">Interests</h3>
+        <div class="interests-list">
+          <span class="tag">API Testing</span>
+          <span class="tag">Cloud Security</span>
+          <span class="tag">Web Application Testing</span>
+          <span class="tag">Malware Analysis</span>
+          <span class="tag">Reverse Engineering</span>
+          <span class="tag">Incident Response</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Experience</div>
+        <h2>Work &amp; competitions</h2>
+        <p>Hands-on offensive security work, from CTFs to real engagements.</p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items:start;">
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <div class="timeline-date">2026</div>
+            <h3>Africa Internet Summit CTF — Competitor</h3>
+            <p>Placed 4th of 259 competitors, scoring 11,700 points.</p>
+            <a class="scorelink" href="https://shield.cyberitxvle.com/events/aisctf-2026/scoreboard" target="_blank" rel="noopener">View scoreboard →</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Ongoing</div>
+            <h3>Ongoza Cyber Hub — Offensive Security</h3>
+            <p>Conducting offensive security operations including passive and active reconnaissance, network penetration testing, web application testing, and exploitation.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Volunteer</div>
+            <h3>NYEKUSA — Web Pentesting</h3>
+            <p>Built the club's website and found a gap: an authentication flow that could be bypassed. Rather than ship a shaky login, I removed the feature and kept the site simple and safe.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 style="margin-bottom:1rem;">Education</h3>
+          <ul class="edu-list">
+            <li><span class="edu-name">BSc. Computer Science<br><span style="font-weight:400;color:var(--text-muted);">Dedan Kimathi University of Technology</span></span><span class="edu-meta">2024–Present</span></li>
+            <li><span class="edu-name">Ethical Hacking<br><span style="font-weight:400;color:var(--text-muted);">Cybershujaa</span></span><span class="edu-meta">2025</span></li>
+            <li><span class="edu-name">Strategic Management<br><span style="font-weight:400;color:var(--text-muted);">Saylor Academy</span></span><span class="edu-meta">2025</span></li>
+            <li><span class="edu-name">Ethical Hacking<br><span style="font-weight:400;color:var(--text-muted);">Cisco Networking Academy</span></span><span class="edu-meta">2024</span></li>
+            <li><span class="edu-name">KCSE — B+<br><span style="font-weight:400;color:var(--text-muted);">Kanjuri Boys High School</span></span><span class="edu-meta">2020–2023</span></li>
+            <li><span class="edu-name">KCPE — 365 Marks<br><span style="font-weight:400;color:var(--text-muted);">Ngunguru Primary School</span></span><span class="edu-meta">2019</span></li>
+          </ul>
+          <a href="assets/files/resume.pdf" class="btn btn--primary" style="margin-top:1.4rem;width:100%;justify-content:center;" target="_blank" rel="noopener">Download full CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WRITE-UPS ================= -->
+  <section id="writeups">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Write-ups</div>
+        <h2>Labs, projects &amp; notes</h2>
+        <p>Field notes from labs, CTFs, and real engagements.</p>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn is-active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="lab">Lab</button>
+        <button class="filter-btn" data-cat="projects">Projects</button>
+        <button class="filter-btn" data-cat="profession">Profession</button>
+      </div>
+
+      <div class="grid grid--3 reveal" id="writeup-grid">
+        <a class="card post-card" data-cat="profession" href="writeups/active-directory-lab-notes.html">
+  <div class="post-meta"><span class="cat-tag">Profession</span><span>·</span><span>Aug 3, 2026</span></div>
+  <h3>Active Directory Lab Notes</h3>
+  <p>Building a disposable AD range to practice enumeration and lateral movement without touching anything real.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="lab" href="writeups/port-scanning-workflow.html">
+  <div class="post-meta"><span class="cat-tag">Lab</span><span>·</span><span>Jul 20, 2026</span></div>
+  <h3>Port Scanning — Workflow Notes</h3>
+  <p>Knowing what's actually listening on a target is the difference between guessing and testing.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="lab" href="writeups/information-gathering-workflow.html">
+  <div class="post-meta"><span class="cat-tag">Lab</span><span>·</span><span>Jul 5, 2026</span></div>
+  <h3>Information Gathering — Recon Workflow</h3>
+  <p>Recon is where every engagement actually starts — this is the workflow I use to map an attack surface before touching an exploit.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="lab" href="writeups/social-engineering-attacks.html">
+  <div class="post-meta"><span class="cat-tag">Lab</span><span>·</span><span>Jul 18, 2025</span></div>
+  <h3>Social Engineering Attacks</h3>
+  <p>Evaluating how the weakest link in any system — people — can be exploited, and what that means for defenders.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="profession" href="writeups/cybersecurity-mindset.html">
+  <div class="post-meta"><span class="cat-tag">Profession</span><span>·</span><span>Jul 17, 2025</span></div>
+  <h3>Cybersecurity Mindset</h3>
+  <p>Knowledge is power — and in this field, that power comes with a choice about how you use it.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="profession" href="writeups/cybersecurity-introduction.html">
+  <div class="post-meta"><span class="cat-tag">Profession</span><span>·</span><span>Jul 12, 2025</span></div>
+  <h3>Cybersecurity Introduction</h3>
+  <p>What most people picture when they hear 'cybersecurity' — and what it actually means to work in it.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="profession" href="writeups/my-cybersecurity-qualities.html">
+  <div class="post-meta"><span class="cat-tag">Profession</span><span>·</span><span>Jun 25, 2025</span></div>
+  <h3>My Cybersecurity Qualities</h3>
+  <p>The traits I try to bring to every engagement, lab, and CTF.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="lab" href="writeups/information-gathering-osint.html">
+  <div class="post-meta"><span class="cat-tag">Lab</span><span>·</span><span>Jun 24, 2025</span></div>
+  <h3>Information Gathering — OSINT Lab</h3>
+  <p>A hands-on OSINT pass using social platforms and passive recon tooling.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="lab" href="writeups/port-scanning-nmap.html">
+  <div class="post-meta"><span class="cat-tag">Lab</span><span>·</span><span>Jun 20, 2025</span></div>
+  <h3>Port Scanning — Nmap Lab</h3>
+  <p>A practical Nmap pass to map open ports and services on a lab target.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="projects" href="writeups/bug-bounty.html">
+  <div class="post-meta"><span class="cat-tag">Projects</span><span>·</span><span>Jun 10, 2025</span></div>
+  <h3>Bug Bounty</h3>
+  <p>Practicing offensive skills the right way — inside legal, structured bug bounty programs.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="projects" href="writeups/max-devices-wifi-router.html">
+  <div class="post-meta"><span class="cat-tag">Projects</span><span>·</span><span>May 15, 2025</span></div>
+  <h3>Maximum Devices Connected to a WiFi Router</h3>
+  <p>A hostel WiFi bottleneck turned into a small, hands-on networking experiment.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+<a class="card post-card" data-cat="projects" href="writeups/pentesting-a-website.html">
+  <div class="post-meta"><span class="cat-tag">Projects</span><span>·</span><span>Dec 28, 2024</span></div>
+  <h3>Pentesting a Website</h3>
+  <p>Taking ownership of a real club website's security — and turning it into a hands-on pentesting project.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BEYOND ================= -->
+  <section id="beyond">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Beyond Cybersecurity</div>
+        <h2>Other things I build &amp; lead</h2>
+        <p>Security isn't the only thing I do — side projects, leadership, and everything else.</p>
+      </div>
+
+      <div class="grid grid--3 reveal">
+        <div class="card proj-card">
+          <div class="proj-num">01</div>
+          <h3>nyekusa.github.io</h3>
+          <p>Built for our campus club, to give it a platform to express who it is — with a bookmarking feature for event photos and members.</p>
+          <a href="https://nyekusa.github.io" target="_blank" rel="noopener">Visit site →</a>
+        </div>
+        <div class="card proj-card">
+          <div class="proj-num">02</div>
+          <h3>findawesomegames.vercel.app</h3>
+          <p>A repository of games for team-building — for organisations, outdoor sessions, and couples. Born from a campus games session where nobody had the right game on hand.</p>
+          <a href="https://findawesomegames.vercel.app" target="_blank" rel="noopener">Visit site →</a>
+        </div>
+        <div class="card proj-card">
+          <div class="proj-num">03</div>
+          <h3>awesomeai-chat.vercel.app</h3>
+          <p>An intentionally hallucinating AI chatbot — built purely for laughs.</p>
+          <a href="https://awesomeai-chat.vercel.app" target="_blank" rel="noopener">Visit site →</a>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:2.5rem;">
+        <h3 style="font-size:1.05rem;margin-bottom:0.5rem;">Leadership</h3>
+        <div class="leadership-item">
+          <h3>Vice Chair, NYEKUSA</h3>
+          <p>After serving as Secretary General in my first year, I was elected Vice Chair — one of the most influential parts of my campus life, where I learned how leadership can both drain and empower you.</p>
+        </div>
+        <div class="leadership-item">
+          <h3>Mentor, Young Generation</h3>
+          <p>Many peers come to me for career and life advice — grounded in discipline and a habit of following through.</p>
+        </div>
+        <div class="leadership-item">
+          <h3>Learner &amp; Leader, Taifa Teule Leadership Experience</h3>
+          <p>Completed cohort 24 of TLX (Sep–Dec 2025), covering temperaments, risk management, and critical thinking — including a hands-on project renovating a primary school's classrooms. TLX reinforced a simple idea: to lead well, first learn to follow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-band reveal">
+        <h2>Let's work together.</h2>
+        <p>Open to offensive security internships, freelance engagements, and CTF teams. I usually reply within a day.</p>
+        <div class="contact-links">
+          <a href="mailto:cityangel111@gmail.com" class="btn btn--primary">Email me</a>
+          <a href="https://github.com/cityangel1" target="_blank" rel="noopener" class="btn btn--ghost" style="border-color:var(--muted-accent);color:inherit;">GitHub</a>
+          <a href="https://linkedin.com/in/brian-karaba-wachira" target="_blank" rel="noopener" class="btn btn--ghost" style="border-color:var(--muted-accent);color:inherit;">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;width:100%;">
+    <span class="fmark mono">© 2026 Brian Karaba Wachira</span>
+    <div class="flinks">
+      <a href="mailto:cityangel111@gmail.com">Email</a>
+      <a href="https://github.com/cityangel1" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/brian-karaba-wachira" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
