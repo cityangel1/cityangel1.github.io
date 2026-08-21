@@ -257,7 +257,34 @@ html[data-theme="dark"] .tt-knob { transform: translateX(26px); }
 .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- hero ---------- */
-.hero { padding: 5rem 0 4rem; }
+.hero {
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--text) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--text) 8%, transparent) 1px, transparent 1px);
+  background-size: 42px 42px;
+  background-position: center top;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 90%);
+  mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 90%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.55em;
+  font-family: "JetBrains Mono", monospace; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+.hero-eyebrow .diamond {
+  width: 8px; height: 8px; background: var(--accent); transform: rotate(45deg); flex: none;
+}
 .hero-inner {
   display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3.5rem; align-items: center;
 }
@@ -276,6 +303,7 @@ html[data-theme="dark"] .tt-knob { transform: translateX(26px); }
   display: inline-flex; align-items: center; gap: 0.5em;
   font-family: "JetBrains Mono", monospace; font-size: 0.78rem; font-weight: 600;
   color: var(--text-muted);
+  margin-bottom: 1.1rem;
 }
 .status-chip .pulse {
   width: 8px; height: 8px; border-radius: 50%; background: #3FB27F; position: relative;
@@ -428,10 +456,13 @@ html[data-theme="dark"] .tt-knob { transform: translateX(26px); }
   background: var(--text); color: var(--bg); border-radius: 16px;
   padding: 3.2rem 2.5rem; text-align: center;
 }
-html[data-theme="dark"] .contact-band { background: var(--surface); border: 1px solid var(--border); }
+html[data-theme="dark"] .contact-band { background: var(--surface); border: 1px solid var(--border); color: var(--text); }
 .contact-band h2 { color: inherit; font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
 .contact-band p { color: var(--muted-accent); max-width: 46ch; margin: 0.8rem auto 1.8rem; }
 html[data-theme="dark"] .contact-band p { color: var(--text-muted); }
+.contact-band .btn--ghost { border-color: var(--bg); color: inherit; }
+html[data-theme="dark"] .contact-band .btn--ghost { border-color: var(--border); color: var(--text); }
+.contact-band .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
 .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.9rem; }
 
 footer.site-footer {
