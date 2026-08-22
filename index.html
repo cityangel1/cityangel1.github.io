@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brian Karaba Wachira — Offensive Security</title>
 <meta name="description" content="Offensive security portfolio of Brian Karaba Wachira — penetration testing, red teaming, and incident response write-ups.">
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -13,7 +15,10 @@
 
 <nav id="site-nav">
   <div class="nav-inner">
-    <a href="#top" class="nav-mark"><span class="dot"></span>brian@offsec:~$</a>
+    <a href="#top" class="nav-mark">
+      <img src="assets/images/logo-cropped.png" alt="Offensive Security wordmark" class="nav-logo">
+      <span class="dot"></span>brian@offsec:~$
+    </a>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -148,6 +153,17 @@ After all, We're all alike.
           </details>
         </div>
       </div>
+
+      <div class="about-strip reveal">
+        <figure class="strip-card">
+          <img src="assets/images/leap.jpg" alt="Silhouette of a person leaping between two cliff edges at sunset">
+          <figcaption>Every engagement starts with a calculated leap — recon first, then commit.</figcaption>
+        </figure>
+        <figure class="strip-card">
+          <img src="assets/images/success-cycle.jpg" alt="Wall art showing a success cycle: think, idea, try, do, do again, keep doing, success">
+          <figcaption>Think. Try. Do it again. Progress here is a loop, not a straight line.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -262,6 +278,12 @@ After all, We're all alike.
       </div>
 
       <div class="grid grid--3 reveal" id="writeup-grid">
+<a class="card post-card" data-cat="profession" href="writeups/active-directory-lab-notes.html">
+  <div class="post-meta"><span class="cat-tag">Profession</span><span>·</span><span>Aug 3, 2026</span></div>
+  <h3>Active Directory Lab Notes</h3>
+  <p>Building a disposable AD range to practice enumeration and lateral movement without touching anything real.</p>
+  <span class="read-more">Read write-up →</span>
+</a>
 <a class="card post-card" data-cat="lab" href="writeups/port-scanning-workflow.html">
   <div class="post-meta"><span class="cat-tag">Lab</span><span>·</span><span>Jul 20, 2026</span></div>
   <h3>Port Scanning — Workflow Notes</h3>
@@ -341,8 +363,8 @@ After all, We're all alike.
         <p>Security isn't the only thing I do — side projects, leadership, and everything else.</p>
       </div>
 
+      <h3 class="beyond-subhead reveal">Developer</h3>
       <div class="grid grid--3 reveal">
-         <h3 style="font-size:1.05rem;margin-bottom:0.5rem;">Developer</h3>
         <div class="card proj-card">
           <div class="proj-num">01</div>
           <h3>nyekusa.github.io</h3>
@@ -364,7 +386,7 @@ After all, We're all alike.
       </div>
 
       <div class="reveal" style="margin-top:2.5rem;">
-        <h3 style="font-size:1.05rem;margin-bottom:0.5rem;">Leadership</h3>
+        <h3 class="beyond-subhead">Leadership</h3>
         <div class="leadership-item">
           <h3>Vice Chair, NYEKUSA</h3>
           <p>After serving as Secretary General in my first year, I was elected Vice Chair — one of the most influential parts of my campus life, where I learned how leadership can both drain and empower you.</p>
@@ -400,7 +422,7 @@ After all, We're all alike.
 
 <footer class="site-footer">
   <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;width:100%;">
-    <span class="fmark mono">Yours Hacker: Brian Karaba Wachira</span>
+    <span class="fmark mono"><img src="assets/images/logo-icon.png" alt="Offensive Security wordmark" class="footer-logo"><span class="fmark-green">Yours Hacker:</span> <span class="fmark-orange">Brian Karaba Wachira</span></span>
     <div class="flinks">
       <a href="mailto:cityangel111@gmail.com">Email</a>
       <a href="https://github.com/cityangel1" target="_blank" rel="noopener">GitHub</a>
